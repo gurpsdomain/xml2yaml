@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+<advantage_list unique_id="hv8id3uc:-e6u7xnrpfa9n" version="1">
+    <advantage version="2">
+        <name>360&#176; Vision</name>
+        <type>Physical, Exotic</type>
+        <base_points>25</base_points>
+        <modifier version="1" enabled="no">
+            <name>Easy to hit </name>
+            <cost type="percentage">-20</cost>
+            <affects>total</affects>
+            <reference>B34</reference>
+            <notes>Others can target your eyes at -6</notes>
+        </modifier>
+        <modifier version="1" enabled="no">
+            <name>Panoptic 1</name>
+            <cost type="percentage">20</cost>
+            <affects>total</affects>
+            <reference>P39</reference>
+        </modifier>
+        <modifier version="1" enabled="no">
+            <name>Panoptic 2</name>
+            <cost type="percentage">60</cost>
+            <affects>total</affects>
+            <reference>P39</reference>
+        </modifier>
+        <reference>B34</reference>
+        <categories>
+            <category>Advantage</category>
+        </categories>
+    </advantage>
+    <advantage version="2">
+        <name>Absent-Mindedness</name>
+        <type>Mental</type>
+        <base_points>-15</base_points>
+        <reference>B122</reference>
+        <categories>
+            <category>Disadvantage</category>
+        </categories>
+    </advantage>
+    <advantage version="2">
+        <name>Absolute Direction</name>
+        <type>Mental/Physical</type>
+        <base_points>5</base_points>
+        <modifier version="1" enabled="no">
+            <name>Requires signal</name>
+            <cost type="percentage">-20</cost>
+            <affects>total</affects>
+            <reference>B34</reference>
+        </modifier>
+        <modifier version="1" enabled="no">
+            <name>3D Spatial Sense</name>
+            <cost type="points">5</cost>
+            <affects>total</affects>
+            <reference>B34</reference>
+            <skill_bonus>
+                <name compare="starts with">piloting</name>
+                <specialization compare="is anything"></specialization>
+                <amount>1</amount>
+            </skill_bonus>
+            <skill_bonus>
+                <name compare="is">aerobatics</name>
+                <specialization compare="is anything"></specialization>
+                <amount>2</amount>
+            </skill_bonus>
+            <skill_bonus>
+                <name compare="is">free fall</name>
+                <specialization compare="is anything"></specialization>
+                <amount>2</amount>
+            </skill_bonus>
+            <skill_bonus>
+                <name compare="is">navigation</name>
+                <specialization compare="is">hyperspace</specialization>
+                <amount>2</amount>
+            </skill_bonus>
+            <skill_bonus>
+                <name compare="is">navigation</name>
+                <specialization compare="is">space</specialization>
+                <amount>2</amount>
+            </skill_bonus>
+        </modifier>
+        <reference>B34</reference>
+        <categories>
+            <category>Advantage</category>
+        </categories>
+        <skill_bonus>
+            <name compare="is">body sense</name>
+            <specialization compare="is anything"></specialization>
+            <amount>3</amount>
+        </skill_bonus>
+        <skill_bonus>
+            <name compare="is">navigation</name>
+            <specialization compare="is">air</specialization>
+            <amount>3</amount>
+        </skill_bonus>
+        <skill_bonus>
+            <name compare="is">navigation</name>
+            <specialization compare="is">land</specialization>
+            <amount>3</amount>
+        </skill_bonus>
+        <skill_bonus>
+            <name compare="is">navigation</name>
+            <specialization compare="is">sea</specialization>
+            <amount>3</amount>
+        </skill_bonus>
+    </advantage>
+  </advantage_list>
