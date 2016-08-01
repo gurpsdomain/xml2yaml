@@ -1,11 +1,15 @@
 package org.gurpsdomain.xml2yml;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Advantage {
     private String name;
+    @XmlElement(name = "base_points")
     private int basePoints;
     private String reference;
 
@@ -31,7 +35,6 @@ public class Advantage {
         return basePoints;
     }
 
-    @XmlElement(name = "base_points")
     public void setBasePoints(int basePoints) {
         this.basePoints = basePoints;
     }
