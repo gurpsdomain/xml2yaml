@@ -1,6 +1,5 @@
-package org.gurpsdomain.tools;
+package org.gurpsdomain.xml2yml;
 
-import org.gurpsdomain.xml2yml.Advantage;
 import org.junit.Test;
 
 import javax.xml.bind.JAXBContext;
