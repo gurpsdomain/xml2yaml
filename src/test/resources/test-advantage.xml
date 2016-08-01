@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<advantage version="2">
+    <name>360&#176; Vision</name>
+    <type>Physical, Exotic</type>
+    <base_points>25</base_points>
+    <modifier version="1" enabled="no">
+        <name>Easy to hit </name>
+        <cost type="percentage">-20</cost>
+        <affects>total</affects>
+        <reference>B34</reference>
+        <notes>Others can target your eyes at -6</notes>
+    </modifier>
+    <modifier version="1" enabled="no">
+        <name>Panoptic 1</name>
+        <cost type="percentage">20</cost>
+        <affects>total</affects>
+        <reference>P39</reference>
+    </modifier>
+    <modifier version="1" enabled="no">
+        <name>Panoptic 2</name>
+        <cost type="percentage">60</cost>
+        <affects>total</affects>
+        <reference>P39</reference>
+    </modifier>
+    <reference>B34</reference>
+    <categories>
+        <category>Advantage</category>
+    </categories>
+</advantage>
