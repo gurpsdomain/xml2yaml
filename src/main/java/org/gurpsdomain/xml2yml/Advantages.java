@@ -23,6 +23,14 @@ public class Advantages {
         this.advantages.addAll(asList(advantages));
     }
 
+    public List<Advantage> getAdvantages() {
+        return advantages;
+    }
+
+    public void setAdvantages(List<Advantage> advantages) {
+        this.advantages = advantages;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
