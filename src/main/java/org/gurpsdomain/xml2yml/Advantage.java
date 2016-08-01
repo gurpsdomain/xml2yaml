@@ -5,11 +5,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Advantage {
-    @XmlElement
     private String name;
-    @XmlElement(name="base_points")
     private int basePoints;
-    @XmlElement
     private String reference;
 
     public Advantage() {
@@ -19,6 +16,31 @@ public class Advantage {
     public Advantage(String name, int basePoints, String reference) {
         this.name = name;
         this.basePoints = basePoints;
+        this.reference = reference;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getBasePoints() {
+        return basePoints;
+    }
+
+    @XmlElement(name = "base_points")
+    public void setBasePoints(int basePoints) {
+        this.basePoints = basePoints;
+    }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
         this.reference = reference;
     }
 
