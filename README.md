@@ -18,4 +18,17 @@ is an executable jar that can be run with the following command
 java -jar xml2yaml-<VERSION>-jar-with-dependencies.jar <data-file>
 ```
 
+For ease of use, one can create the following script
+
+```bash
+#! /usr/bin/env bash
+
+LOCATION=<INSTALLATION-DIRECTORY>
+VERSION=<INSTALLED-VERSION>
+
+java -jar $LOCATION/xml2yaml-$VERSION-jar-with-dependencies.jar "$@"
+```
+
+substituting the correct values for `<INSTALLATION-DIRECTORY>` and `<VERSION>`.
+
 [maven]: https://maven.apache.org/
