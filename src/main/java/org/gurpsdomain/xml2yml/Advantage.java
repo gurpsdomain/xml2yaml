@@ -11,6 +11,8 @@ public class Advantage {
     private String name;
     @XmlElement(name = "base_points")
     private int basePoints;
+    @XmlElement(name = "points_per_level", required=false)
+    private Integer pointsPerLevel;
     private String reference;
 
     public Advantage() {
@@ -45,6 +47,14 @@ public class Advantage {
 
     public void setReference(String reference) {
         this.reference = reference;
+    }
+
+    public void setPointsPerLevel(Integer pointsPerLevel) {
+        this.pointsPerLevel = pointsPerLevel;
+    }
+
+    public Integer getPointsPerLevel() {
+        return pointsPerLevel;
     }
 
     @Override
