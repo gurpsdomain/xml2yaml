@@ -20,8 +20,13 @@ public class Advantage {
     }
 
     public Advantage(String name, int basePoints, String reference) {
+        this(name, basePoints, null, reference);
+    }
+
+    public Advantage(String name, int basePoints, Integer pointsPerLevel, String reference) {
         this.name = name;
         this.basePoints = basePoints;
+        this.pointsPerLevel = pointsPerLevel;
         this.reference = reference;
     }
 

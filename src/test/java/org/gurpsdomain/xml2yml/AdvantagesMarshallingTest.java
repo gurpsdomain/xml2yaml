@@ -33,7 +33,7 @@ public class AdvantagesMarshallingTest {
         Advantages advantage = new Advantages(
                 new Advantage("360° Vision", 25, "B34"),
                 new Advantage("Absent-Mindedness", -15, "B122"),
-                new Advantage("Absolute Direction", 5, "B34")
+                new Advantage("Magery", 5, 10, "B66")
         );
 
         String result = yaml.dump(advantage);
