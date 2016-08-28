@@ -28,8 +28,7 @@ public class AdvantageMarshallingTest {
 
     @Test
     public void shouldSucceed() {
-        Representer representer = new Representer();
-        representer.addClassTag(Advantage.class, new Tag("!advantage"));
+        Representer representer = new AdvantageRepresenter();
         Yaml yaml = new Yaml(representer, new DumperOptions());
         Advantage advantage = new Advantage("360° Vision", 25, "B34");
 

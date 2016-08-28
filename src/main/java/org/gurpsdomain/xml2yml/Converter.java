@@ -52,9 +52,7 @@ public class Converter {
 
         Advantages advantages = (Advantages) context.createUnmarshaller().unmarshal(inputStream);
 
-        Representer representer = new Representer();
-        representer.addClassTag(Advantages.class, new Tag("!advantages"));
-        representer.addClassTag(Advantage.class, new Tag("!advantage"));
+        Representer representer = new AdvantageRepresenter();
         Yaml yaml = new Yaml(representer, new DumperOptions());
 
         Writer writer = new OutputStreamWriter(System.out);
