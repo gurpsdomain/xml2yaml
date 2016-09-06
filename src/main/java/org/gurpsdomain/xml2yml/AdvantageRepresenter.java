@@ -7,8 +7,8 @@ import org.yaml.snakeyaml.representer.Representer;
 
 public class AdvantageRepresenter extends Representer {
     public AdvantageRepresenter() {
-        this.addClassTag(Advantages.class, new Tag("!advantages"));
-        this.addClassTag(Advantage.class, new Tag("!advantage"));
+        this.addClassTag(Advantages.class, Tag.MAP);
+        this.addClassTag(Advantage.class, Tag.MAP);
     }
 
     @Override
