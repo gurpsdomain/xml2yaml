@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.Arrays;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -23,7 +24,7 @@ public class AdvantagesUnmarshallingTest {
         Advantages testAdvantages = (Advantages) context.createUnmarshaller().unmarshal(input);
 
         assertThat(testAdvantages, is(new Advantages(
-                new Advantage("360° Vision", 25, "B34"),
+                new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{new Modifier("Easy to hit "), new Modifier("Panoptic 1"), new Modifier("Panoptic 2")})),
                 new Advantage("Absent-Mindedness", -15, "B122"),
                 new Advantage("Absolute Direction", 5, "B34")
         )));

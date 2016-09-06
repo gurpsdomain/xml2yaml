@@ -4,6 +4,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
+
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -14,6 +16,8 @@ public class Advantage {
     @XmlElement(name = "points_per_level", required=false)
     private Integer pointsPerLevel;
     private String reference;
+    @XmlElement(name = "modifier", required=false)
+    private List<Modifier> modifiers;
 
     public Advantage() {
         /* Needed for Jaxb */
@@ -24,10 +28,19 @@ public class Advantage {
     }
 
     public Advantage(String name, int basePoints, Integer pointsPerLevel, String reference) {
+        this(name, basePoints, pointsPerLevel, reference, null);
+    }
+
+    public Advantage(String name, int basePoints, String reference, List<Modifier> modifiers) {
+        this(name, basePoints, null, reference, modifiers);
+    }
+
+    public Advantage(String name, int basePoints, Integer pointsPerLevel, String reference, List<Modifier> modifiers) {
         this.name = name;
         this.basePoints = basePoints;
         this.pointsPerLevel = pointsPerLevel;
         this.reference = reference;
+        this.modifiers = modifiers;
     }
 
     public String getName() {
@@ -60,6 +73,14 @@ public class Advantage {
 
     public Integer getPointsPerLevel() {
         return pointsPerLevel;
+    }
+
+    public void setModifiers(List<Modifier> modifiers) {
+        this.modifiers = modifiers;
+    }
+
+    public List<Modifier> getModifiers() {
+        return modifiers;
     }
 
     @Override

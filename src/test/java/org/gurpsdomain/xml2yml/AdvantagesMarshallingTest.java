@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.Matchers.is;
@@ -31,7 +32,7 @@ public class AdvantagesMarshallingTest {
         Representer representer = new AdvantageRepresenter();
         Yaml yaml = new Yaml(representer, new DumperOptions());
         Advantages advantage = new Advantages(
-                new Advantage("360° Vision", 25, "B34"),
+                new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{new Modifier("Easy to hit "), new Modifier("Panoptic 1"), new Modifier("Panoptic 2")})),
                 new Advantage("Absent-Mindedness", -15, "B122"),
                 new Advantage("Magery", 5, 10, "B66")
         );

@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 import static org.hamcrest.Matchers.is;
@@ -22,7 +23,7 @@ public class AdvantageUnmarshallingTest {
     @Parameterized.Parameters(name = "{0}")
     public static Collection<Object[]> data() {
         Collection<Object[]> data = new ArrayList<Object[]>();
-        data.add(new Object[]{ "test-advantage.xml", new Advantage("360° Vision", 25, "B34") });
+        data.add(new Object[]{ "test-advantage.xml", new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{new Modifier("Easy to hit "), new Modifier("Panoptic 1"), new Modifier("Panoptic 2")})) });
         data.add(new Object[]{ "test-advantage-with-levels.xml", new Advantage("Magery", 5, 10, "B66") });
         return data;
     }

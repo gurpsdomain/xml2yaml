@@ -1,1 +1,8 @@
-!advantage {basePoints: 25, name: 360° Vision, reference: B34}
+!advantage
+basePoints: 25
+modifiers:
+- {name: 'Easy to hit '}
+- {name: Panoptic 1}
+- {name: Panoptic 2}
+name: 360° Vision
+reference: B34

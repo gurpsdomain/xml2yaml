@@ -1,5 +1,11 @@
 !advantages
 advantages:
-- {basePoints: 25, name: 360° Vision, reference: B34}
+- basePoints: 25
+  modifiers:
+  - {name: 'Easy to hit '}
+  - {name: Panoptic 1}
+  - {name: Panoptic 2}
+  name: 360° Vision
+  reference: B34
 - {basePoints: -15, name: Absent-Mindedness, reference: B122}
 - {basePoints: 5, name: Magery, pointsPerLevel: 10, reference: B66}

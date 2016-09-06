@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -24,7 +25,7 @@ public class AdvantageMarshallingTest {
     @Parameterized.Parameters(name = "{0}")
     public static Collection<Object[]> data() {
         Collection<Object[]> data = new ArrayList<>();
-        data.add(new Object[]{ "test-advantage.yml", new Advantage("360° Vision", 25, "B34") });
+        data.add(new Object[]{ "test-advantage.yml", new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{ new Modifier("Easy to hit "), new Modifier("Panoptic 1"), new Modifier("Panoptic 2")}))});
         data.add(new Object[]{ "test-advantage-with-levels.yml", new Advantage("Magery", 5, 10, "B66") });
         return data;
     }

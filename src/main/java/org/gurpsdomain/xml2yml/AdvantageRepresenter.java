@@ -13,7 +13,7 @@ public class AdvantageRepresenter extends Representer {
 
     @Override
     protected NodeTuple representJavaBeanProperty(Object javaBean, Property property, Object propertyValue, Tag customTag) {
-        if (javaBean instanceof Advantage && "pointsPerLevel".equals(property.getName()) && propertyValue == null) {
+        if (javaBean instanceof Advantage && ("pointsPerLevel".equals(property.getName()) || "modifiers".equals(property.getName())) && propertyValue == null) {
             return null;
         }
         return super.representJavaBeanProperty(javaBean, property, propertyValue, customTag);
