@@ -1,7 +1,10 @@
 basePoints: 25
 modifiers:
-- {name: 'Easy to hit '}
-- {name: Panoptic 1}
-- {name: Panoptic 2}
+- cost: {type: percentage, value: -20}
+  name: 'Easy to hit '
+- cost: {type: percentage, value: 20}
+  name: Panoptic 1
+- cost: {type: percentage, value: 60}
+  name: Panoptic 2
 name: 360° Vision
 reference: B34

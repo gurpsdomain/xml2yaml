@@ -1,5 +1,7 @@
 package org.gurpsdomain.xml2yml;
 
+import org.gurpsdomain.xml2yml.modifier.Cost;
+import org.gurpsdomain.xml2yml.modifier.CostType;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +27,7 @@ public class AdvantageMarshallingTest {
     @Parameterized.Parameters(name = "{0}")
     public static Collection<Object[]> data() {
         Collection<Object[]> data = new ArrayList<>();
-        data.add(new Object[]{ "test-advantage.yml", new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{ new Modifier("Easy to hit "), new Modifier("Panoptic 1"), new Modifier("Panoptic 2")}))});
+        data.add(new Object[]{ "test-advantage.yml", new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{ new Modifier("Easy to hit ", new Cost(CostType.percentage, -20)), new Modifier("Panoptic 1", new Cost(CostType.percentage, 20)), new Modifier("Panoptic 2", new Cost(CostType.percentage, 60))}))});
         data.add(new Object[]{ "test-advantage-with-levels.yml", new Advantage("Magery", 5, 10, "B66") });
         return data;
     }
@@ -36,7 +38,7 @@ public class AdvantageMarshallingTest {
 
     public AdvantageMarshallingTest(String fileName, Advantage advantage) {
         this.expectedYml = new File("src/test/resources/" + fileName);
-        this.advantage = advantage;
+        this.advantage = advantage  ;
 
     }
 

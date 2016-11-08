@@ -1,5 +1,7 @@
 package org.gurpsdomain.xml2yml;
 
+import org.gurpsdomain.xml2yml.modifier.Cost;
+import org.gurpsdomain.xml2yml.modifier.CostType;
 import org.junit.Test;
 
 import javax.xml.bind.JAXBContext;
@@ -24,9 +26,10 @@ public class AdvantagesUnmarshallingTest {
         Advantages testAdvantages = (Advantages) context.createUnmarshaller().unmarshal(input);
 
         assertThat(testAdvantages, is(new Advantages(
-                new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{new Modifier("Easy to hit "), new Modifier("Panoptic 1"), new Modifier("Panoptic 2")})),
+                new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{new Modifier("Easy to hit ", new Cost(CostType.percentage, -20)), new Modifier("Panoptic 1", new Cost(CostType.percentage, 20)), new Modifier("Panoptic 2", new Cost(CostType.percentage, 60))})),
                 new Advantage("Absent-Mindedness", -15, "B122"),
-                new Advantage("Absolute Direction", 5, "B34")
+                new Advantage("Absolute Direction", 5, "B34", Arrays.asList(new Modifier[]{new Modifier("Requires signal", new Cost(CostType.percentage, -20)), new Modifier("3D Spatial Sense", new Cost(CostType.points, 5))}))
+
         )));
 
     }

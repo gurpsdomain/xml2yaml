@@ -1,5 +1,7 @@
 package org.gurpsdomain.xml2yml;
 
+import org.gurpsdomain.xml2yml.modifier.Cost;
+import org.gurpsdomain.xml2yml.modifier.CostType;
 import org.junit.Before;
 import org.junit.Test;
 import org.yaml.snakeyaml.DumperOptions;
@@ -32,7 +34,7 @@ public class AdvantagesMarshallingTest {
         Representer representer = new AdvantageRepresenter();
         Yaml yaml = new Yaml(representer, new DumperOptions());
         Advantages advantage = new Advantages(
-                new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{new Modifier("Easy to hit "), new Modifier("Panoptic 1"), new Modifier("Panoptic 2")})),
+                new Advantage("360° Vision", 25, "B34", Arrays.asList(new Modifier[]{new Modifier("Easy to hit ", new Cost(CostType.percentage, -20)), new Modifier("Panoptic 1", new Cost(CostType.percentage, 20)), new Modifier("Panoptic 2", new Cost(CostType.percentage, 60))})),
                 new Advantage("Absent-Mindedness", -15, "B122"),
                 new Advantage("Magery", 5, 10, "B66")
         );
