@@ -1,4 +1,7 @@
 # xml2yaml [![Build Status](https://travis-ci.org/gurpsdomain/xml2yaml.svg?branch=master)](https://travis-ci.org/gurpsdomain/xml2yaml)
+**Deprecated** This project is deprecated. The preferred way of reading data is shifted from
+Yaml to XML.
+
 A tool to converter xml data files into yml data files
 
 ## Building
